@@ -12,12 +12,13 @@ Intel Core i7-8850H CPU 2.60GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical 
 
 |                                Method |     Mean |    Error |   StdDev |   Median | Ratio | RatioSD |
 |-------------------------------------- |---------:|---------:|---------:|---------:|------:|--------:|
-|                             UsingList | 714.3 ms | 13.24 ms | 21.39 ms | 703.8 ms |  1.00 |    0.00 |
-|                 UsingPreAllocatedList | 674.8 ms | 10.10 ms |  8.95 ms | 671.6 ms |  0.92 |    0.03 |
-|                             UsingEnum | 654.5 ms |  9.29 ms | 10.33 ms | 651.8 ms |  0.91 |    0.03 |
-|                    UsingEnumWithClass | 636.8 ms | 12.22 ms | 11.43 ms | 631.1 ms |  0.87 |    0.02 |
-|             UsingEnumAndStringBuilder | 203.3 ms |  2.78 ms |  2.46 ms | 204.0 ms |  0.28 |    0.01 |
-| UsingEnumAndPreAllocatedStringBuilder | 138.3 ms |  1.38 ms |  1.29 ms | 138.5 ms |  0.19 |    0.01 |
+|                             UsingList | 702.8 ms |  6.60 ms |  5.85 ms | 702.5 ms |  1.00 |    0.00 |
+|                 UsingPreAllocatedList | 675.1 ms |  7.07 ms |  6.27 ms | 673.1 ms |  0.96 |    0.01 |
+|                             UsingEnum | 679.1 ms | 12.98 ms | 31.59 ms | 668.9 ms |  0.93 |    0.02 |
+|                    UsingEnumWithClass | 663.1 ms | 11.52 ms | 19.25 ms | 662.6 ms |  0.96 |    0.03 |
+|          UsingEnumWithClassAndJsonNet | 403.4 ms |  7.19 ms |  6.72 ms | 402.2 ms |  0.57 |    0.01 |
+|             UsingEnumAndStringBuilder | 209.9 ms |  4.14 ms |  6.20 ms | 208.4 ms |  0.30 |    0.01 |
+| UsingEnumAndPreAllocatedStringBuilder | 141.1 ms |  2.81 ms |  4.21 ms | 140.1 ms |  0.20 |    0.01 |
 
 ## .Net Framework 4.8 ##
 
@@ -27,11 +28,12 @@ Intel Core i7-8850H CPU 2.60GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical 
   DefaultJob : .NET Framework 4.8 (4.8.4180.0), X64 RyuJIT
 
 
-|                                Method |       Mean |    Error |   StdDev | Ratio | RatioSD |
-|-------------------------------------- |-----------:|---------:|---------:|------:|--------:|
-|                             UsingList | 1,007.1 ms | 20.06 ms | 43.62 ms |  1.00 |    0.00 |
-|                 UsingPreAllocatedList |   956.2 ms | 17.63 ms | 16.49 ms |  0.97 |    0.03 |
-|                             UsingEnum |   809.3 ms | 13.47 ms | 16.03 ms |  0.81 |    0.03 |
-|                    UsingEnumWithClass |   832.6 ms | 11.32 ms | 10.04 ms |  0.85 |    0.03 |
-|             UsingEnumAndStringBuilder |   308.3 ms |  3.67 ms |  3.43 ms |  0.31 |    0.01 |
-| UsingEnumAndPreAllocatedStringBuilder |   247.6 ms |  0.66 ms |  0.55 ms |  0.25 |    0.01 |
+|                                Method |     Mean |    Error |   StdDev | Ratio | RatioSD |
+|-------------------------------------- |---------:|---------:|---------:|------:|--------:|
+|                             UsingList | 949.9 ms |  6.78 ms |  6.34 ms |  1.00 |    0.00 |
+|                 UsingPreAllocatedList | 929.7 ms |  9.97 ms |  8.84 ms |  0.98 |    0.01 |
+|                             UsingEnum | 820.0 ms |  6.72 ms |  5.61 ms |  0.86 |    0.01 |
+|                    UsingEnumWithClass | 800.2 ms | 15.31 ms | 14.32 ms |  0.84 |    0.02 |
+|          UsingEnumWithClassAndJsonNet | 743.5 ms |  7.93 ms |  7.03 ms |  0.78 |    0.01 |
+|             UsingEnumAndStringBuilder | 301.9 ms |  3.94 ms |  3.50 ms |  0.32 |    0.00 |
+| UsingEnumAndPreAllocatedStringBuilder | 245.3 ms |  1.96 ms |  1.83 ms |  0.26 |    0.00 |

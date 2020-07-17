@@ -148,6 +148,28 @@ namespace DotNetJsonSerializationBenchmark
             }
         }
 
+         [Benchmark]
+        public string UsingEnumWithClassAndJsonNet()
+        {
+            return System.Text.Json.JsonSerializer.Serialize(new { Type = "VariableList", Value = GetParameter().Concat(GetVariables())});
+
+            IEnumerable<DataInfo> GetParameter()
+            {
+                foreach(var parameter in data.Parameter)
+                {
+                    yield return new  DataInfo {Type = "Parameter", Name = parameter};
+                }
+            }
+
+            IEnumerable<DataInfo> GetVariables()
+            {
+                foreach(var variable in data.Variables)
+                {
+                    yield return new DataInfo {Type = variable.Contains('[') ? "VariableElement" : "Variable", Name = variable};
+                }
+            }
+        }
+
 
         [Benchmark]
         public string UsingEnumAndStringBuilder()
