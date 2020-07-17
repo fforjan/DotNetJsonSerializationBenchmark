@@ -23,6 +23,10 @@ jobs:
       run: dotnet build --configuration Release --no-restore --framework netcoreapp3.1
     - name: Test netcoreapp3.1
       run: dotnet run -c Release  --framework netcoreapp3.1
+    - name: Build net48
+      run: dotnet build --configuration Release --no-restore --framework net48
+    - name: Test netcoreapp3.1
+      run: dotnet run -c Release  --framework net48
     - name: Setup .NET Core 5.0
       uses: actions/setup-dotnet@v1
       with:
