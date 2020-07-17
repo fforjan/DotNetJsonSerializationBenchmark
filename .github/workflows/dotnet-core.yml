@@ -20,7 +20,7 @@ jobs:
     - name: Setup .NET Core 5.0
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: dotnet-sdk-5.0.100-preview.6.20318.15
+        dotnet-version: 5.0.100-preview.6.20318.15
     - name: Install dependencies
       run: dotnet restore
     - name: Build netcoreapp3.1
