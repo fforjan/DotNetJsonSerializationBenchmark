@@ -25,7 +25,7 @@ jobs:
       run: dotnet run -c Release  --framework netcoreapp3.1
     - name: Build net48
       run: dotnet build --configuration Release --no-restore --framework net48
-    - name: Test netcoreapp3.1
+    - name: Test net48
       run: dotnet run -c Release  --framework net48
     - name: Setup .NET Core 5.0
       uses: actions/setup-dotnet@v1
@@ -37,3 +37,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore --framework net5.0
     - name: Test net5.0
       run: dotnet run -c Release  --framework net5.0
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Binaries
+        path: bin/Release
