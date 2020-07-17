@@ -261,7 +261,6 @@ namespace DotNetJsonSerializationBenchmark
             #else
             var summary = BenchmarkRunner.Run<BenchMark>();
             #endif
-            Console.ReadKey();
         }
     }
 }
