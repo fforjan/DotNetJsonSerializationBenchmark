@@ -13,7 +13,8 @@ namespace DotNetJsonSerializationBenchmark
 
             var same = dummy == dummy2;
             #else
-            BenchmarkRunner.Run(typeof(Program).Assembly);
+            BenchmarkRunner.Run<SingleObjectBenchMark>();
+            BenchmarkRunner.Run<LargeSimpleListBenchMark>();            
             #endif
         }
     }
