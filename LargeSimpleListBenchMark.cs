@@ -6,7 +6,7 @@ using BenchmarkDotNet.Attributes;
 using Newtonsoft.Json;
 namespace DotNetJsonSerializationBenchmark
 {
-    public class BenchMark
+    public class LargeSimpleListBenchMark
     {
         private Data data = new Data(new Random(42), 30000, 50000, 100);
 

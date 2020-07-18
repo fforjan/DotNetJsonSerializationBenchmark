@@ -6,14 +6,14 @@ namespace DotNetJsonSerializationBenchmark
         static void Main(string[] args)
         {
             #if DEBUG
-            var benchmark = new BenchMark();
+            var benchmark = new SingleObjectBenchMark();
 
-            var dummy = benchmark.UsingEnum();
-            var dummy2 = benchmark.UsingEnumAndStringBuilder();
+            var dummy = benchmark.UsingAnymousSerialization();
+            var dummy2 = benchmark.UsingStringBuild();
 
             var same = dummy == dummy2;
             #else
-            var summary = BenchmarkRunner.Run<BenchMark>();
+            BenchmarkRunner.Run(typeof(Program).Assembly);
             #endif
         }
     }
